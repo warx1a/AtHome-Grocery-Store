@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Products";
+}
+
+<div class="header-content">
+    <h2>Products</h2>
+</div>
+<div class="body-content">
+    <div class="searchArea">
+        @using (Html.BeginForm("Store", "Store", FormMethod.Post, new { @id = "frmSearchFilters" }))
+        {
+            <div class="filters">
+                <label>This is where search filters will go</label>
+            </div>
+        }
+    </div>
+    <div class="productList">
+        <label>This is where a list of products will go</label>
+    </div>
+</div>

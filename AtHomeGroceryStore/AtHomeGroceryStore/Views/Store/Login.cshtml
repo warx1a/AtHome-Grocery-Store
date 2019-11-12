@@ -1,0 +1,32 @@
+﻿@using AtHomeGroceryStore.Models
+@model Login
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="header-content">
+    <h2>Login</h2>
+</div>
+<div class="body-content">
+    @using (Html.BeginForm("Login", "Store", FormMethod.Post, new { @id = "frmLogin" }))
+    {
+        <table>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.username, "Username:")
+                </td>
+                <td>
+                    @Html.TextBoxFor(m => m.username)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(m => m.password, "Password:")
+                </td>
+                <td>
+                    @Html.PasswordFor(m => m.password)
+                </td>
+            </tr>
+        </table>
+    }
+</div>

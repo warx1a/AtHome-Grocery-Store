@@ -8,7 +8,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{D79857FD-F86C-45A9-87D1-4CD7C94A0848}</ProjectGuid>
+    <ProjectGuid>{6F0AFAF9-D8E2-4A91-B0C6-69199DFBA6F4}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -112,51 +112,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Core">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.Owin">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.2\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNet.Identity.EntityFramework">
-      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="Owin">
-      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin">
-      <HintPath>..\packages\Microsoft.Owin.4.0.0\lib\net451\Microsoft.Owin.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Host.SystemWeb">
-      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.4.0.0\lib\net451\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security">
-      <HintPath>..\packages\Microsoft.Owin.Security.4.0.0\lib\net451\Microsoft.Owin.Security.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Cookies">
-      <HintPath>..\packages\Microsoft.Owin.Security.Facebook.4.0.0\lib\net451\Microsoft.Owin.Security.Facebook.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Cookies">
-      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.4.0.0\lib\net451\Microsoft.Owin.Security.Cookies.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Google">
-      <HintPath>..\packages\Microsoft.Owin.Security.Google.4.0.0\lib\net451\Microsoft.Owin.Security.Google.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.Twitter">
-      <HintPath>..\packages\Microsoft.Owin.Security.Twitter.4.0.0\lib\net451\Microsoft.Owin.Security.Twitter.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.MicrosoftAccount">
-      <HintPath>..\packages\Microsoft.Owin.Security.MicrosoftAccount.4.0.0\lib\net451\Microsoft.Owin.Security.MicrosoftAccount.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Owin.Security.OAuth">
-      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.0\lib\net451\Microsoft.Owin.Security.OAuth.dll</HintPath>
-    </Reference>
     <Reference Include="System.Diagnostics.DiagnosticSource">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.4.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
@@ -170,55 +125,24 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
-    <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="App_Start\Startup.Auth.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Data\ApplicationDbContext.cs" />
-    <Compile Include="Data\Migrations\00000000000000_CreateIdentitySchema.cs" />
-    <Compile Include="Data\Migrations\00000000000000_CreateIdentitySchema.Designer.cs">
-      <DependentUpon>00000000000000_CreateIdentitySchema.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Migrations\ApplicationDbContextModelSnapshot.cs" />
-    <Compile Include="Extensions\EmailSenderExtensions.cs" />
-    <Compile Include="Extensions\UrlHelperExtensions.cs" />
+    <Compile Include="Controllers\StoreController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\AccountViewModels\ExternalLoginViewModel.cs" />
-    <Compile Include="Models\AccountViewModels\ForgotPasswordViewModel.cs" />
-    <Compile Include="Models\AccountViewModels\LoginViewModel.cs" />
-    <Compile Include="Models\AccountViewModels\LoginWith2faViewModel.cs" />
-    <Compile Include="Models\AccountViewModels\LoginWithRecoveryCodeViewModel.cs" />
-    <Compile Include="Models\AccountViewModels\RegisterViewModel.cs" />
-    <Compile Include="Models\AccountViewModels\ResetPasswordViewModel.cs" />
-    <Compile Include="Models\ApplicationUser.cs" />
-    <Compile Include="Models\CartItems.cs" />
-    <Compile Include="Models\ErrorViewModel.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
-    <Compile Include="Models\ManageViewModels.cs" />
-    <Compile Include="Models\ManageViewModels\ChangePasswordViewModel.cs" />
-    <Compile Include="Models\ManageViewModels\EnableAuthenticatorViewModel.cs" />
-    <Compile Include="Models\ManageViewModels\ExternalLoginsViewModel.cs" />
-    <Compile Include="Models\ManageViewModels\IndexViewModel.cs" />
-    <Compile Include="Models\ManageViewModels\RemoveLoginViewModel.cs" />
-    <Compile Include="Models\ManageViewModels\SetPasswordViewModel.cs" />
-    <Compile Include="Models\ManageViewModels\ShowRecoveryCodesViewModel.cs" />
-    <Compile Include="Models\ManageViewModels\TwoFactorAuthenticationViewModel.cs" />
+    <Compile Include="Models\AdminArea.cs" />
+    <Compile Include="Models\BillingInfo.cs" />
+    <Compile Include="Models\GenericResponse.cs" />
+    <Compile Include="Models\Login.cs" />
+    <Compile Include="Models\PaymentMethod.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\ProductInfo.cs" />
+    <Compile Include="Models\ProductReview.cs" />
+    <Compile Include="Models\ProductSearch.cs" />
+    <Compile Include="Models\Profile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Startup.cs" />
-    <Compile Include="Views\Manage\ManageNavPages.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="css\StyleSheet.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -247,52 +171,16 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
-    <Content Include="Views\Account\ForgotPassword.cshtml" />
-    <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
-    <Content Include="Views\Account\ResetPassword.cshtml" />
-    <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\SendCode.cshtml" />
-    <Content Include="Views\Account\VerifyCode.cshtml" />
-    <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
-    <Content Include="Views\Manage\ChangePassword.cshtml" />
-    <Content Include="Views\Manage\Index.cshtml" />
-    <Content Include="Views\Manage\ManageLogins.cshtml" />
-    <Content Include="Views\Manage\SetPassword.cshtml" />
-    <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
-    <Content Include="Views\Shared\Lockout.cshtml" />
-    <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Account\AccessDenied.cshtml" />
-    <Content Include="Views\Account\ExternalLogin.cshtml" />
-    <Content Include="Views\Account\Lockout.cshtml" />
-    <Content Include="Views\Account\LoginWith2fa.cshtml" />
-    <Content Include="Views\Account\LoginWithRecoveryCode.cshtml" />
-    <Content Include="Views\Account\SignedOut.cshtml" />
-    <Content Include="Views\Home\Cart.cshtml" />
-    <Content Include="Views\Home\FAQ.cshtml" />
-    <Content Include="Views\Home\Products.cshtml" />
-    <Content Include="Views\Home\Profile.cshtml" />
-    <Content Include="Views\Manage\Disable2fa.cshtml" />
-    <Content Include="Views\Manage\EnableAuthenticator.cshtml" />
-    <Content Include="Views\Manage\ExternalLogins.cshtml" />
-    <Content Include="Views\Manage\GenerateRecoveryCodes.cshtml" />
-    <Content Include="Views\Manage\ResetAuthenticator.cshtml" />
-    <Content Include="Views\Manage\ShowRecoveryCodes.cshtml" />
-    <Content Include="Views\Manage\TwoFactorAuthentication.cshtml" />
-    <Content Include="Views\Manage\_Layout.cshtml" />
-    <Content Include="Views\Manage\_ManageNav.cshtml" />
-    <Content Include="Views\Manage\_StatusMessage.cshtml" />
-    <Content Include="Views\Manage\_ViewImports.cshtml" />
-    <Content Include="Views\Shared\_ValidationScriptsPartial.cshtml" />
-    <Content Include="Views\_ViewImports.cshtml" />
+    <Content Include="Views\Store\AdminPanel.cshtml" />
+    <Content Include="Views\Store\Checkout.cshtml" />
+    <Content Include="Views\Store\FAQ.cshtml" />
+    <Content Include="Views\Store\Index.cshtml" />
+    <Content Include="Views\Store\Login.cshtml" />
+    <Content Include="Views\Store\ProductInfo.cshtml" />
+    <Content Include="Views\Store\Profile.cshtml" />
+    <Content Include="Views\Store\Registration.cshtml" />
+    <Content Include="Views\Store\ViewProducts.cshtml" />
+    <Content Include="Views\Store\Products.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -302,10 +190,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.3.1.min.map" />
@@ -326,9 +210,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50961</DevelopmentServerPort>
+          <DevelopmentServerPort>63765</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:50961/</IISUrl>
+          <IISUrl>http://localhost:63765/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
