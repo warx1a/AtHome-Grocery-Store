@@ -127,11 +127,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\StoreController.cs" />
+    <Compile Include="Database\CategoryDB.cs" />
+    <Compile Include="Database\ProductDB.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AdminArea.cs" />
     <Compile Include="Models\BillingInfo.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\GenericResponse.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\PaymentMethod.cs" />

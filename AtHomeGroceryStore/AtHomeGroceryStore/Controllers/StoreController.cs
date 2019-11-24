@@ -1,4 +1,5 @@
 ﻿using AtHomeGroceryStore.Models;
+using AtHomeGroceryStore.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,14 +41,6 @@ namespace AtHomeGroceryStore.Controllers
         {
             //TODO: Add profile login and profile info
             return View();
-        }
-
-        [HttpGet]
-        public ActionResult ProductInfo()
-        {
-            //TODO: add db calls to fill in prodct
-            Product p = new Product();
-            return View(p);
         }
 
         [HttpPost]

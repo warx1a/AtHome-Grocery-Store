@@ -1,4 +1,5 @@
-﻿
+﻿@using AtHomeGroceryStore.Models;
+@model ProductSearch
 @{
     ViewBag.Title = "Products";
 }
@@ -12,10 +13,27 @@
         {
             <div class="filters">
                 <label>This is where search filters will go</label>
+                <ul>
+                    @foreach (Category cat in Model.availableCats)
+                    {
+                        <li><span class="categoryItem">@cat.categoryName</span></li>
+                    }
+                </ul>
             </div>
         }
     </div>
     <div class="productList">
         <label>This is where a list of products will go</label>
+        <table>
+            @foreach(ProductInfo prod in Model.availableProducts)
+            {
+                <tr>
+                    <td>@prod.productName</td>
+                </tr>
+            }
+            <tr>
+
+            </tr>
+        </table>
     </div>
 </div>
