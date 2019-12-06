@@ -1,5 +1,4 @@
 ﻿using AtHomeGroceryStore.Models;
-using AtHomeGroceryStore.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,34 +9,6 @@ namespace AtHomeGroceryStore.Controllers
 {
     public class StoreController : Controller
     {
-
-        private ProductDB _productDB;
-        private ProductDB productDB
-        {
-            get
-            {
-                if(_productDB == null)
-                {
-                    _productDB = new ProductDB();
-                }
-                return _productDB;
-            }
-        }
-
-        private List<int> filteredCategories
-        {
-            get
-            {
-                return (List<int>)Session["filteredCategories"];
-            }
-            set
-            {
-                Session["filteredCategories"] = value;
-            }
-        }
-
-
-
         // GET: Store
         [HttpGet]
         public ActionResult Index()
@@ -49,31 +20,13 @@ namespace AtHomeGroceryStore.Controllers
         public ActionResult Products()
         {
             ProductSearch search = new ProductSearch();
-            filteredCategories = new List<int>();
-            search.filterCats = new List<int>();
             return View(search);
         }
 
         [HttpPost]
         public ActionResult Products(ProductSearch search)
         {
-            if(search.infoCode != null)
-            {
-                ProductInfo p = productDB.getProductInfoById(search.infoCode ?? 0);
-                return View("ProductInfo", p);
-            } else
-            {
-                if(search.filterOperation.Equals("add"))
-                {
-                    filteredCategories.Add(search.filterCategory);
-                } else if(search.filterOperation.Equals("remove"))
-                {
-                    filteredCategories.Remove(search.filterCategory);
-                }
-                search.filterCats = filteredCategories;
-                search.filteredProducts = productDB.searchProducts(search);
-                return View(search);
-            }
+            return View(search);
         }
 
         [HttpGet]
@@ -87,6 +40,14 @@ namespace AtHomeGroceryStore.Controllers
         {
             //TODO: Add profile login and profile info
             return View();
+        }
+
+        [HttpGet]
+        public ActionResult ProductInfo()
+        {
+            //TODO: add db calls to fill in prodct
+            Product p = new Product();
+            return View(p);
         }
 
         [HttpPost]

@@ -1,92 +1,21 @@
-﻿@using AtHomeGroceryStore.Models;
-@model ProductSearch
+﻿
 @{
     ViewBag.Title = "Products";
 }
-
-@Scripts.Render("~/bundles/productsJS")
 
 <div class="header-content">
     <h2>Products</h2>
 </div>
 <div class="body-content">
     <div class="searchArea">
-        @using (Html.BeginForm("Products", "Store", FormMethod.Post, new { @id = "frmSearchFilters" }))
+        @using (Html.BeginForm("Store", "Store", FormMethod.Post, new { @id = "frmSearchFilters" }))
         {
-            @Html.HiddenFor(f => f.filterCategory, new { @id="hdnCatFilter" })
-            @Html.HiddenFor(f => f.filterOperation, new { @id= "hdnCatOperation" })
             <div class="filters">
                 <label>This is where search filters will go</label>
-                <ul>
-                    @foreach (Category cat in Model.availableCats)
-                    {
-                    <li>
-                        @if ((from fCat in Model.filterCats select fCat).ToList().Contains(cat.categoryId))
-                        {
-                            <input class="cbCategory" type="checkbox" value="@cat.categoryId" checked/>
-                        }
-                        else
-                        {
-                            <input class="cbCategory" type="checkbox" value="@cat.categoryId" />
-                        }
-                        <span class="categoryItem">@cat.categoryName</span>
-                    </li>
-                    }
-                </ul>
             </div>
         }
     </div>
     <div class="productList">
-        <table>
-            @if (Model.filteredProducts == null || Model.filteredProducts.Count.Equals(0))
-            {
-                foreach (ProductInfo prod in Model.availableProducts)
-                {
-                    <tr>
-                        <td>
-                            <div class="productHolder">
-                                <img src="~/Content/ProductPhotos/@prod.productPicture" />
-                                <div class="productInfo">
-                                    <span class="productName">@prod.productName</span>
-                                    <span class="productDesc">@prod.description</span>
-                                </div>
-                                <div class="productButton">
-                                    @using (Html.BeginForm("Products", "Store", FormMethod.Post))
-                                    {
-                                        <input type="hidden" name="infoCode" value="@prod.productCode" />
-                                        <input type="submit" value="View Item" />
-                                    }
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                }
-            }
-            else
-            {
-                foreach (ProductInfo prod in Model.filteredProducts)
-                {
-                    <tr>
-                        <td>
-                            <div class="productHolder">
-                                <img src="~/Content/ProductPhotos/@prod.productPicture" />
-                                <div class="productInfo">
-                                    <span class="productName">@prod.productName</span>
-                                    <span class="productDesc">@prod.description</span>
-                                </div>
-                                <div class="productButton">
-                                    @using (Html.BeginForm("Products", "Store", FormMethod.Post))
-                                    {
-                                        <input type="hidden" name="infoCode" value="@prod.productCode" />
-                                        <input type="submit" value="View Item" />
-                                    }
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                }
-            }
-            <tr></tr>
-        </table>
+        <label>This is where a list of products will go</label>
     </div>
 </div>

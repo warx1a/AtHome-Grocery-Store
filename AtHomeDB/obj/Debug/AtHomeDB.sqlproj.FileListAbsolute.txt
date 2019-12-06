@@ -1,10 +1,9 @@
 C:\Users\stink_000.LJ\Documents\AtHome-Grocery-Store\AtHomeDB\bin\Debug\AtHomeDB.dacpac
 C:\Users\stink_000.LJ\Documents\AtHome-Grocery-Store\AtHomeDB\bin\Debug\AtHomeDB.dll
 C:\Users\stink_000.LJ\Documents\AtHome-Grocery-Store\AtHomeDB\bin\Debug\AtHomeDB.pdb
-C:\Users\stink_000.LJ\Documents\AtHome-Grocery-Store\AtHomeDB\obj\Debug\AtHomeDB.dll
-C:\Users\stink_000.LJ\Documents\AtHome-Grocery-Store\AtHomeDB\obj\Debug\AtHomeDB.pdb
-C:\Users\stink_000.LJ\Documents\AtHome-Grocery-Store\AtHomeDB\obj\Debug\AtHomeDB.sqlprojAssemblyReference.cache
 C:\Users\stink_000.LJ\Documents\AtHome-Grocery-Store\AtHomeDB\obj\Debug\Model.xml
 C:\Users\stink_000.LJ\Documents\AtHome-Grocery-Store\AtHomeDB\obj\Debug\refactor.xml
 C:\Users\stink_000.LJ\Documents\AtHome-Grocery-Store\AtHomeDB\obj\Debug\postdeploy.sql
 C:\Users\stink_000.LJ\Documents\AtHome-Grocery-Store\AtHomeDB\obj\Debug\predeploy.sql
+C:\Users\stink_000.LJ\Documents\AtHome-Grocery-Store\AtHomeDB\obj\Debug\AtHomeDB.dll
+C:\Users\stink_000.LJ\Documents\AtHome-Grocery-Store\AtHomeDB\obj\Debug\AtHomeDB.pdb
