@@ -11,6 +11,10 @@ namespace AtHomeGroceryStore
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/productsJS").Include(
+                        "~/Scripts/products.js"
+                ));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/site.css"));
         }

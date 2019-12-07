@@ -45,3 +45,38 @@ body {
 nav ul li a {
     color: white;
 }
+
+.productButton {
+    display: inline-block;
+    height: 50px;
+    vertical-align: top;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.productName {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 150%;
+}
+
+.productInfo {
+    vertical-align: top;
+    display: inline-block;
+    height: 180px;
+}
+
+.productHolder img {
+    height: 150px;
+    width: auto;
+    display: inline-block;
+}
+
+.productHolder {
+    height: 200px;
+}
+
+.searchArea {
+    vertical-align: top;
+}

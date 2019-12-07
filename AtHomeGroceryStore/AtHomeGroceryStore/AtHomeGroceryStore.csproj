@@ -127,11 +127,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\StoreController.cs" />
+    <Compile Include="Database\CategoryDB.cs" />
+    <Compile Include="Database\ProductDB.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AdminArea.cs" />
     <Compile Include="Models\BillingInfo.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\GenericResponse.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\PaymentMethod.cs" />
@@ -140,10 +143,36 @@
     <Compile Include="Models\ProductReview.cs" />
     <Compile Include="Models\ProductSearch.cs" />
     <Compile Include="Models\Profile.cs" />
-    <Compile Include="Models\RegisterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\ProductPhotos\apple.jpg" />
+    <Content Include="Content\ProductPhotos\bodysoap.jpg" />
+    <Content Include="Content\ProductPhotos\carrot.jpg" />
+    <Content Include="Content\ProductPhotos\chickenbreast.jpg" />
+    <Content Include="Content\ProductPhotos\chickengizzard.jpg" />
+    <Content Include="Content\ProductPhotos\chickentenders.jpg" />
+    <Content Include="Content\ProductPhotos\chickenwings.jpg" />
+    <Content Include="Content\ProductPhotos\comb.jpg" />
+    <Content Include="Content\ProductPhotos\flank.jpg" />
+    <Content Include="Content\ProductPhotos\frenchbread.jpg" />
+    <Content Include="Content\ProductPhotos\groundbeef.jpg" />
+    <Content Include="Content\ProductPhotos\kingshawaiian.jpg" />
+    <Content Include="Content\ProductPhotos\lemon.jpg" />
+    <Content Include="Content\ProductPhotos\lime.jpg" />
+    <Content Include="Content\ProductPhotos\mango.jpg" />
+    <Content Include="Content\ProductPhotos\newyorkstrip.jpg" />
+    <Content Include="Content\ProductPhotos\orange.jpg" />
+    <Content Include="Content\ProductPhotos\potato.jpg" />
+    <Content Include="Content\ProductPhotos\primerib.jpg" />
+    <Content Include="Content\ProductPhotos\ribeye.jpg" />
+    <Content Include="Content\ProductPhotos\ryebread.jpg" />
+    <Content Include="Content\ProductPhotos\shampoo.jpg" />
+    <Content Include="Content\ProductPhotos\tissue.jpg" />
+    <Content Include="Content\ProductPhotos\tomato.jpg" />
+    <Content Include="Content\ProductPhotos\wheatbread.jpg" />
+    <Content Include="Content\ProductPhotos\wholechicken.jpg" />
+    <Content Include="Content\ProductPhotos\yam.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -161,6 +190,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\products.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
